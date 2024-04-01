@@ -1,0 +1,159 @@
+/* =================================================== google fonts =================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* ================================================== custom variables ================================================== */
+:root {
+  --white-color: #ffffff;
+  --red-color: #ff6685;
+  --blue-color: cornflowerblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.projectdetails-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+.headline {
+  font-weight: 500;
+}
+
+.headline::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 50px;
+  background-color: var(--blue-color);
+  margin: 0 auto;
+}
+
+.passwordmanager-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 1rem;
+  place-content: center;
+  padding: 1rem;
+  box-shadow: 0 0 2rem 1rem #c7cbf2;
+  border-radius: 10px;
+  width: 60%;
+}
+
+#passwordmanager-table,
+tr,
+td {
+  border-collapse: collapse;
+  border: 1px solid #677483;
+  padding: 5px;
+}
+
+th {
+  font-weight: 600;
+}
+
+td,
+th {
+  font-size: 13px;
+}
+
+.inputfields {
+  padding: 5px 8px;
+  width: 100%;
+  outline: none;
+  background: var(--white-color);
+}
+
+.form-fields {
+  margin: 10px auto;
+  position: relative;
+}
+
+.storepassword-btn {
+  background: var(--blue-color);
+  color: var(--white-color);
+  text-transform: capitalize;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.storepassword-btn:hover {
+  background: var(--white-color);
+  color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+}
+
+.passwordmanager-box .description {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 10px 0;
+}
+
+#input-website.error-inputs,
+#input-emailid.error-inputs,
+#input-password.error-inputs {
+  border: 1px solid var(--red-color);
+}
+
+#copypassword-icon {
+  color: var(--blue-color);
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  cursor: pointer;
+}
+
+.delete-tableentry-icon {
+  background: var(--red-color);
+  color: var(--white-color);
+  text-transform: capitalize;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.delete-tableentry-icon:hover {
+  background: transparent;
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
+}
+
+#nodata-to-showtext {
+  font-size: 3rem;
+}
+
+/* ================================================== media query ================================================== */
+@media only screen and (min-width: 50px) and (max-width: 776px) {
+  .passwordmanager-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    box-shadow: 0 0 2rem 1rem #c7cbf2;
+    border-radius: 10px;
+    width: 80%;
+  }
+  #passwordmanager-table,
+  tr,
+  td {
+    width: 100%;
+  }
+}
